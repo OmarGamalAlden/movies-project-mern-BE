@@ -24,13 +24,13 @@ export const signUp = async (req, res, next) => {
   }
   //sending token with link to user for confirm email
   const token = generateToken({ payLoad: { email }, expiresIn: 60 * 10 });
-  const link = `${req.protocol}://${req.headers.host}/auth/confirmEmail/${token}`;
+  const link = `https://noxe-project-mern-be.vercel.app/auth/confirmEmail/${token}`;
   //if user asked a new confirm email...
   const refreshToken = generateToken({
     payLoad: { email },
     expiresIn: 60 * 60 * 24 * 30,
   });
-  const refreshLink = `${req.protocol}://${req.headers.host}/auth/newConfirmEmail/${refreshToken}`;
+  const refreshLink = `https://noxe-project-mern-be.vercel.app/auth/newConfirmEmail/${refreshToken}`;
 
   const html = `<!DOCTYPE html>
   <html>
@@ -188,8 +188,8 @@ export const newConfirmEmail = async (req, res, next) => {
   const { email } = verifyToken({ token });
 
   const newToken = generateToken({ payLoad: { email }, expiresIn: 60 * 3 });
-  const link = `${req.protocol}://${req.headers.host}/auth/confirmEmail/${newToken}`;
-  const refreshLink = `${req.protocol}://${req.headers.host}/auth/newConfirmEmail/${token}`;
+  const link = `https://noxe-project-mern-be.vercel.app/auth/confirmEmail/${newToken}`;
+  const refreshLink = `https://noxe-project-mern-be.vercel.app/auth/newConfirmEmail/${token}`;
 
   const html = `<!DOCTYPE html>
     <html>
