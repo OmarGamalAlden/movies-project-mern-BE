@@ -32,5 +32,7 @@ Node.js, MongoDB, Express.js and Mongoose
 </details>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<h4> Front-end repo : <a href="https://github.com/OmarGamalAlden/movies-project-mern-FE" target="_blank"></a> </h4>
+
 <img src="https://github.com/Govindv7555/Govindv7555/blob/main/49e76e0596857673c5c80c85b84394c1.gif" width=100% height=95px>
 <p align="right">(<a href="#top">back to top</a>)</p>
