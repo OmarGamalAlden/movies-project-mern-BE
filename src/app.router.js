@@ -4,7 +4,7 @@ import cors from "cors";
 
 export const initApp = (app, express) => {
   //for receiving request form my front-end!!!
-  let whiteList = ["https://omargamalalden.github.io"]; //fron-end links
+  let whiteList = ["https://omargamalalden.github.io","http://localhost:3000/"]; //fron-end links
   let corsOptions = {
     origin: function (origin, callback) {
       if (whiteList.indexOf(origin) !== -1 || !origin) {
